@@ -1,0 +1,20 @@
+[package]
+name = "rust-mixer-api"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+actix-cors = "0.7.0"
+actix-web = "4.9.0"
+base64 = "0.22.1"
+crc32fast = "1.4.2"
+dotenv = "0.15.0"
+hex = "0.4.3"
+num-bigint = "0.4.6"
+num_cpus = "1.16.0"
+serde = { version = "1.0.209", features = ["derive"] }
+serde_json = "1.0.127"
+tokio = "1.39.3"
+tonlib = "0.15"
