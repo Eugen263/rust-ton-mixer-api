@@ -1,0 +1,141 @@
+{
+	"info": {
+		"_postman_id": "06022087-5aee-4d06-a31f-c4462479e736",
+		"name": "Mixer Contract API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34291961",
+		"_collection_link": "https://lineardev-ecosystem-development.postman.co/workspace/LinearDev-Ecosystem-Development~2a066ed3-5204-46c9-8801-2a96382e8a84/collection/34291961-06022087-5aee-4d06-a31f-c4462479e736?action=share&source=collection_link&creator=34291961"
+	},
+	"item": [
+		{
+			"name": "spread",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n        \"account\": \"0QC6RQecwOm9v2jLfyCdhF-4TBWP99seEESmimHLSVO2OKhx\",\n        \"amount\": 0.5\n    },\n    {\n        \"account\": \"0QDtkae6bgHzZauzUOSbR-mkA82n8PcBAgLmNaghRo_gWK94\",\n        \"amount\": 0.5\n    }\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/mixer/spread",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"mixer",
+						"spread"
+					]
+				},
+				"description": "invokes spread operation on smart contract"
+			},
+			"response": []
+		},
+		{
+			"name": "get opcodes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/mixer/op_codes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"mixer",
+						"op_codes"
+					]
+				},
+				"description": "returnes operatino codes for mixer contracts"
+			},
+			"response": []
+		},
+		{
+			"name": "collect",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"mode\": 3,\n    \"jetton_wallet\": \"\",\n    \"ammount\": 0.5\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/mixer/collect",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"mixer",
+						"collect"
+					]
+				},
+				"description": "invokes collect operation on smart contract"
+			},
+			"response": []
+		},
+		{
+			"name": "get collect modes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/mixer/collect/modes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"mixer",
+						"collect",
+						"modes"
+					]
+				},
+				"description": "in collect mode 3 we require\n\nreturnes operations ints for collect operation"
+			},
+			"response": []
+		},
+		{
+			"name": "fork",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearear",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/mixer/fork",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"mixer",
+						"fork"
+					]
+				},
+				"description": "creates a fork of this mixer contract"
+			},
+			"response": []
+		}
+	]
+}
